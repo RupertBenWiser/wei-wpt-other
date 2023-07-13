@@ -23,9 +23,7 @@
     // and reports it back to the window that opened it.
     // The parent can then do partioning verification with that result.
     (async () => {
-        // const result = await navigator.getEnvironmentIntegrity(await contentBinding);
-        // messageParent("token", result.encode());
-
-        messageParent("token", await contentBinding);
+        const result = await navigator.getEnvironmentIntegrity(await contentBinding);
+        messageParent("token", result.encode());
     })();
 </script>
